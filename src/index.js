@@ -5,8 +5,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const baseURL = process.env.PUBLIC_URL || ''
 ReactDOM.render(
-    <Router>
+    <Router basename ={baseURL}>
         <App />
     </Router>,
     document.getElementById('root')
