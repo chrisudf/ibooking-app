@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const baseURL = process.env.PUBLIC_URL || ''
+const baseURL = process.env.PUBLIC_URL || '/IBooking'
 ReactDOM.render(
     <Router basename ={baseURL}>
         <App />
