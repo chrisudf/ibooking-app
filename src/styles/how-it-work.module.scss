@@ -1,0 +1,30 @@
+@import 'color';
+
+.guidetitle {
+  text-align: center;
+  padding-top:7vh;
+  .boldTitle {
+    color:$iBookColor;
+    border-bottom:3px solid $iBookColor;
+  }
+}
+.guideCard{
+  width:100%;
+  padding-top:5vh;
+  padding-bottom:5vh;
+  text-align: center;
+  color:gray;
+  font-size:0.7em;
+  .guideIcon {
+    color:$iBookColor;
+    width:4em;
+    height:4em;
+    display: block;
+    margin-right: auto;  
+    margin-left: auto;
+  }
+  .guideContentTitle{
+    padding-top:2vh;
+    color:#000000;
+  }
+}

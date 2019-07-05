@@ -1,0 +1,12 @@
+@import "color";
+
+.footerContainer {
+  background-color:#343a40;
+  height:13vh;
+  color:#fff;
+  font-size:0.7em;
+  text-align:center;
+  .footerContent{
+    padding-top:5vh;
+  }
+}
