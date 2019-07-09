@@ -36,7 +36,7 @@ export default()=>{
         </Col>
         <Col xs={3} md={1}>
           <FontAwesomeIcon icon={faCar} className={Styles.serviceIcon} />
-          <p className={Styles.serviceType}>car washing</p>
+          <p className={Styles.serviceType}>Car Washing</p>
         </Col>
       </Row>
     </div>
