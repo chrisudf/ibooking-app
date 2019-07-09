@@ -15,10 +15,7 @@ const TopNav = (props) => {
         <Navbar.Brand href="#home">I<span className={Styles.ibookBrand}>book</span>ing</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            {/* <Nav.Link href="/Post">Post</Nav.Link> */}
-            {/* <Nav.Link href="/Task">Task</Nav.Link> */}
-          </Nav>
+          <Nav className="mr-auto"></Nav>
           <Nav>
             <Nav.Link href="/Post">Post</Nav.Link>
             <Nav.Link href="/Login">Log in</Nav.Link>

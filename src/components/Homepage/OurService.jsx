@@ -28,7 +28,7 @@ export default()=>{
         </Col>
         <Col xs={3} md={1}>
           <FontAwesomeIcon icon={faHouseDamage} className={Styles.serviceIcon} />
-          <p className={Styles.serviceType}>We'll Clean it.</p>
+          <p className={Styles.serviceType}>House Reparing</p>
         </Col>
         <Col xs={3} md={1}>
           <FontAwesomeIcon icon={faBug} className={Styles.serviceIcon} />

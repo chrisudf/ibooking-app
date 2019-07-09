@@ -3,7 +3,6 @@ import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import Register from './Register'
 import Tasker from '../Tasker'
 import Home from './Home'
-// import Routes from './Routes'
 export default () => ((
     <Switch>
         <Route exact path="/" component={Home} />
