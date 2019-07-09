@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as  Route, Switch } from "react-router-dom";
-import Task from '../Task'
+import Register from './Register'
 import Tasker from '../Tasker'
 import Home from './Home'
 // import Routes from './Routes'
 export default () => ((
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/task" component={Task} />
+        <Route exact path="/Register" component={Register} />
         <Route exact path="/tasker" component={Tasker} />
     </Switch>
     ));
