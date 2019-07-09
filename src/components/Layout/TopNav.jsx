@@ -16,12 +16,13 @@ const TopNav = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/Tasker">Tasker</Nav.Link>
-            <Nav.Link href="/Task">Task</Nav.Link>
+            {/* <Nav.Link href="/Post">Post</Nav.Link> */}
+            {/* <Nav.Link href="/Task">Task</Nav.Link> */}
           </Nav>
           <Nav>
+            <Nav.Link href="/Post">Post</Nav.Link>
             <Nav.Link href="/Login">Log in</Nav.Link>
-            <Nav.Link href="/Logout">Log out</Nav.Link>
+            <Nav.Link href="/Register">Register</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

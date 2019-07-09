@@ -13,7 +13,7 @@ export default class App extends Component {
       <Layout>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Welcome to IBOOK</title>
+          <title>Welcome to IBOOKING</title>
           <link href="/" />
         </Helmet>
         <Banner />

@@ -22,8 +22,8 @@ export default () => {
         </Col>
         <Col md={3}>
           <FontAwesomeIcon icon={faDoorOpen} className={Styles.guideIcon} />
-          <h5 className={Styles.guideContentTitle}>We'll Clean it.</h5>
-          <p>Our trusted & experienced maid will come to your door-step on the time for a cleaning</p>
+          <h5 className={Styles.guideContentTitle}>We'll Do it.</h5>
+          <p>Our trusted & experienced taskers will come to your door-step and get every thing done</p>
         </Col>
       </Row>
     </div>
