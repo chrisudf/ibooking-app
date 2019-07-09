@@ -1,0 +1,39 @@
+@import 'color';
+
+.serviceContainer{
+  background-color:$backgroundColor;
+  .servicetitle {
+    text-align: center;
+    padding-top:7vh;
+    .serviceBoldTitle {
+      color:$iBookColor;
+      border-bottom:3px solid $iBookColor;
+    }
+  }
+  .serviceCard {
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+    padding-top:5vh;
+    padding-bottom:5vh;
+    text-align: center;
+    color:gray;
+    font-size:0.7em;
+    .serviceIcon {
+      padding:5px;
+      color:#fff;
+      border-radius: 1em;
+      background-color:$iBookColor;
+      width:5em;
+      height:5em;
+      display: block;
+      margin-right: auto;  
+      margin-left: auto;
+    }
+    .serviceType{
+      color:#000;
+      font-weight:bold;
+      padding-top:1vh;
+    }
+  }
+}

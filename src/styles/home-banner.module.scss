@@ -1,0 +1,26 @@
+@import 'color';
+
+.bannerBgimage {
+  min-height: 50vh;
+  background-image: url("/image/Banner.jpg");
+  background-size: cover;
+  background-position: center;
+  .bannerButtonContainer {
+    padding-top: 15vh;
+    .userType {
+      color: white;
+      text-align: center;
+      padding-bottom:5vh;
+      .userButton {
+        background-color: $UserButtoncolor;
+        border-color: $UserButtoncolor;
+      }
+      .userButton:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.03), 0 8px 26px -4px rgba(0, 0, 0, 0.1),
+          0 -18px 35px -19px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+      }
+    }
+  }
+}

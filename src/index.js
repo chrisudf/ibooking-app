@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './index.css';
+import { BrowserRouter as Router} from "react-router-dom";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const baseURL = process.env.PUBLIC_URL || '/IBooking'
 ReactDOM.render(
-    <Router>
+    <Router basename ={baseURL}>
         <App />
     </Router>,
     document.getElementById('root')
