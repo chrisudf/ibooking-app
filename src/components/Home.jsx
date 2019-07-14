@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { Component } from "react";
+// import Layout from '../components/Layout/Layout'
+import Banner from '../components/Homepage/HomeBanner'
+import { Helmet } from "react-helmet"
+import Guide from "../components/Homepage/HowItWork"
+import Service from "../components/Homepage/OurService"
 
-const Home = (props) => {
+export default class Home extends Component {
+  render() {
     return (
-            <p>Welcome</p>
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Welcome to IBOOKING</title>
+        </Helmet>
+        <Banner />
+        <Guide />
+        <Service />
+      </div>
     );
+  }
 }
-export default Home;
