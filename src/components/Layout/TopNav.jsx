@@ -23,7 +23,6 @@ const TopNav = (props) => {
             <Nav.Link href="/Post">Post</Nav.Link>
             <Nav.Link href="/Login">Log in</Nav.Link>
             <Nav.Link href="/Register">Register</Nav.Link> 
-            {/* <Nav.Link href="/Cleaning">Cleaning</Nav.Link> */}
           </Nav>   
         </Navbar.Collapse>
       </Navbar>
