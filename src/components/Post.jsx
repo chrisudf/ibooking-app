@@ -1,18 +1,3 @@
-// import React, { Component } from 'react';
-
-// export default class Login extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-//   render(){
-//     return(
-//       <div>
-//         <p>dw</p>
-//       </div>
-//     )
-//   }
-// }
-
 import React, { Component } from 'react';
 import Button, { LoadingButton } from '../UI/Button';
 export default class TaskEditView extends Component {
@@ -28,21 +13,21 @@ export default class TaskEditView extends Component {
         <div className="row">
           <div className="col-md-6">
             <div className="form-group">
-              <label>Code</label>
+              <label>Category</label>
               <input
                 className="form-control"
-                name="code"
-                value={task.code || ''}
+                name="category"
+                value={task.category || ''}
               />
             </div>
           </div>
           <div className="col-md-6">
             <div className="form-group">
-              <label>Name</label>
+              <label>title</label>
               <input
                 className="form-control"
-                name="name"
-                value={task.name || ''}
+                name="title"
+                value={task.title || ''}
               />
             </div>
           </div>
@@ -50,7 +35,7 @@ export default class TaskEditView extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="form-group">
-              <label>Introduction</label>
+              <label>Description</label>
               <textarea
                 style={{ height: 100 }}
                 className="form-control"
