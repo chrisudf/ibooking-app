@@ -1,25 +1,21 @@
 // import axios from 'axios';
 import React from 'react';
 // import Button, { LoadingButton } from '../UI/Button';
-import TaskerCard from './TaskerCard';
-import {fetchTaskers} from '../../../src/api/tasker'
-import {Link} from "react-router-dom"
-
-export default class TaskersView extends React.Component {
+import TaskCard from './TaskCard';
+import {fetchTasks} from '../../../src/api/task'
+export default class TaskView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // isLoading: false,
       isFetching:false,
-      taskers:[]
+      tasks:[]
     };
   }
   componentDidMount() {
     this.setState({ isFetching: true, error: null});
-    fetchTaskers()
+    fetchTasks()
       .then(data => {
-        this.setState({ taskers:data, isFetching: false });
-        console.log("dwa")
+        this.setState({ tasks:data, isFetching: false });
         console.log(data)
       })     
       .catch(error => {
@@ -29,9 +25,12 @@ export default class TaskersView extends React.Component {
   render() {
     return (
       <div>
-        <h6>Our trust worthy cleaner</h6>
+        {/* <Link to="/taskers/edit/NEW" className="btn btn-lg btn-primary ">
+          Add new tasker
+        </Link> */}
+        <h6>Current tasks</h6>
         <div className="row" style={{ marginTop: 15 }}>
-          {this.state.taskers.map((tasker, index) => <TaskerCard tasker={tasker} key={tasker._id} />)}
+          {this.state.tasks.map((task, index) => <TaskCard task={task} key={task._id} />)}
         </div>
       </div>
     );

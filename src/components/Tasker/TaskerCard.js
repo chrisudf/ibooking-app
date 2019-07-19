@@ -44,24 +44,21 @@ function TaskerMeta({ tasker }) {
   );
 }
 
-// function Footer({ tasker }) {
-//   // <span style={{ flex: 1, textAlign: 'right', paddingRight: 5, color: '#9a9a9a' }}>
-//   //   100+ studied
-//   // </span>
-//   return (
-//     <FlexView row style={{ padding: 5, alignItems: 'center' }}>
-//       <Link
-//         className="btn-borderless"
-//         style={{ paddingLeft: 8 }}
-//         to={{
-//           pathname: `/taskers/edit/${tasker._id}`,
-//           state: { tasker },
-//         }}>
-//         <i className="fa fa-pencil-square-o" style={{ fontSize: 15 }} /> EDIT
-//       </Link>
-//     </FlexView>
-//   );
-// }
+function Footer({ tasker }) {
+  return (
+    <FlexView row style={{ padding: 5, alignItems: 'center' }}>
+      <Link
+        className="btn-borderless"
+        style={{ paddingLeft: 8 }}
+        to={{
+          pathname: `/taskers/edit/${tasker._id}`,
+          state: { tasker },
+        }}>
+        <i className="fa fa-pencil-square-o" style={{ fontSize: 15 }} /> EDIT
+      </Link>
+    </FlexView>
+  );
+}
 
 export default function TaskerCard({ tasker }) {
   return (

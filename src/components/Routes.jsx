@@ -4,6 +4,7 @@ import Register from '../components/Register'
 import Login from '../components/Login'
 import Post from '../components/Post'
 import TaskersView from '../components/Tasker/TaskersView'
+import TaskView from '../components/Task/TaskView'
 import TaskerEditView from '../components/Tasker/TaskerEditView'
 
 import Home from './Home'
@@ -15,6 +16,7 @@ export default () => ((
         <Route exact path="/Register" component={Register} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Cleaning" component={TaskersView} />
-        <Route exact path="/tasker/edit/:id" component={TaskerEditView} />
+        <Route exact path="/tasker/new" component={TaskerEditView} />
+        <Route exact path="/Task" component={TaskView} />
     </Switch>
     ));

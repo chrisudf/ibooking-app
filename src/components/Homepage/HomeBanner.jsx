@@ -10,10 +10,12 @@ export default () => {
       <Container>
         <Row className={cx("justify-content-center",Styles.bannerButtonContainer)}>
           <Col xs={12} md={5} className={Styles.userType}>
-            <Button className={Styles.userButton}><h3>I need booking</h3></Button>
+            <Link to ="/Post">
+              <Button className={Styles.userButton}><h3>I need booking</h3></Button>
+            </Link>
           </Col>
           <Col xs={12} md={5} className={Styles.userType}>
-            <Link to ="/tasker/edit/:id">
+            <Link to ="/tasker/new">
               <Button className={Styles.userButton}><h3>I want to be a tasker</h3></Button>
             </Link>
           </Col> 
