@@ -4,6 +4,8 @@ import Styles from "../../styles/nav.module.scss"
 import {Link} from "react-router-dom"
 import { withRouter } from 'react-router-dom';
 import {loggedIn , logout} from "../../api/auth";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faAmericanSignLanguageInterpreting} from '@fortawesome/free-solid-svg-icons'
 
 export const LoaderLine = () => (
   <div>
@@ -13,9 +15,12 @@ export const LoaderLine = () => (
 class TopNav extends React.Component{
   render(){
     return (
-      <div>
+      <div className={Styles.topNav}>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand href="/">I<span className={Styles.ibookBrand}>Book</span>ing</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <FontAwesomeIcon icon={faAmericanSignLanguageInterpreting} className={Styles.logo} />
+            I<span className={Styles.ibookBrand}>BooK</span>ing
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
