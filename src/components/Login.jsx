@@ -23,12 +23,17 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
     const { email, password } = this.state;
+    console.log({ email, password })
     this.setState({ isFetching: true });
-    login(email, password).then(auth => {
+    login(email, password)
+      .then(auth => {
       this.setState({ isFetching: false });
       this.props.history.push('/');
+      })
+      .catch(error=>{
+        console.log(error.response)
+        window.alert("invalid username or password")
     });
   }
 

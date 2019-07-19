@@ -5,8 +5,8 @@ import Register from "../../components/Register"
 import Home from "../../components/Home"
 import Post from "../../components/Post"
 import Login from "../../components/Login"
-import Cleaning from "../../components/Cleaning"
 import TaskersView from "../../components/Tasker/TaskersView"
+import TaskerEditView from "../../components/Tasker/TaskerEditView"
 import {Route} from "react-router-dom"
 export default class Layout extends Component {
   render(){
@@ -18,6 +18,7 @@ export default class Layout extends Component {
         <Route exact path="/Register" component={Register} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Cleaning" component={TaskersView} />
+        <Route exact path="/tasker/edit/:id" component={TaskerEditView} />       
         <Footer />
       </div>
     )

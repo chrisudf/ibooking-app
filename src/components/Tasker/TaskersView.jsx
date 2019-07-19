@@ -1,7 +1,5 @@
 // import axios from 'axios';
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 // import Button, { LoadingButton } from '../UI/Button';
 import TaskerCard from './TaskerCard';
 import {fetchTaskers} from '../../../src/api/tasker'

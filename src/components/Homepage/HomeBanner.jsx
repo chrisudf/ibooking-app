@@ -13,7 +13,7 @@ export default () => {
             <Button className={Styles.userButton}><h3>I need booking</h3></Button>
           </Col>
           <Col xs={12} md={5} className={Styles.userType}>
-            <Link to ="/tasker/edit/new">
+            <Link to ="/tasker/edit/:id">
               <Button className={Styles.userButton}><h3>I want to be a tasker</h3></Button>
             </Link>
           </Col> 
