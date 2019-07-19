@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export function login(email, password) {
-  return axios.post('/auth', { email, password }).then(auth => {
-    const data = auth.data.data;
+export function login(username, password) {
+  return axios.post('/auth', { username, password }).then(auth => {
+    const data = auth.data;
+    console.log(data)
     localStorage.setItem('jwt_token', data.token);
-
     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.jwt_token}`;
     return data;
   });

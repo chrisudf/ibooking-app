@@ -3,7 +3,10 @@ import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import Register from '../components/Register'
 import Login from '../components/Login'
 import Post from '../components/Post'
-import Cleaning from './Cleaning'
+import TaskersView from '../components/Tasker/TaskersView'
+import TaskView from '../components/Task/TaskView'
+import TaskerEditView from '../components/Tasker/TaskerEditView'
+
 import Home from './Home'
 
 export default () => ((
@@ -12,6 +15,8 @@ export default () => ((
         <Route exact path="/Post" component={Post} />
         <Route exact path="/Register" component={Register} />
         <Route exact path="/Login" component={Login} />
-        <Route exact path="/Cleaning" component={Cleaning} />
+        <Route exact path="/Cleaning" component={TaskersView} />
+        <Route exact path="/tasker/new" component={TaskerEditView} />
+        <Route exact path="/Task" component={TaskView} />
     </Switch>
     ));
