@@ -19,7 +19,6 @@ export default class TaskersView extends React.Component {
     fetchTaskers()
       .then(data => {
         this.setState({ taskers:data, isFetching: false });
-        console.log("dwa")
         console.log(data)
       })     
       .catch(error => {

@@ -19,7 +19,7 @@ export default class App extends Component {
         <Banner />
         <Guide />
         <Service />
-        {/* <Routes /> */}
+        <Routes />
       </Layout>
     );
   }

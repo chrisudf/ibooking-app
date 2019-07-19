@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Button, { LoadingButton } from '../../UI/Button';
 import {withRouter} from "react-router-dom";
-import { fetchTaskerById, addTasker, updateTasker } from '../../api/tasker';
+import { fetchSeekerById, addSeeker, updateSeeker } from '../../api/seeker';
 import BlockUi from "react-block-ui";
 
-class TaskerEditView extends Component {
+class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasker:{},
+      seeker:{},
       isSaving: false,
       isFetching: false, 
       error: null
@@ -17,28 +17,30 @@ class TaskerEditView extends Component {
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState((preState) => {
-      const tasker = { ...preState.tasker };
-      tasker[name] = value;
-      return { tasker };
+      const seeker = { ...preState.seeker };
+      seeker[name] = value;
+      return { seeker };
     });
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const tasker =this.state.tasker
-    // console.log(tasker)
+    const seeker =this.state.seeker
     this.setState({ isSaving: true });
-    addTasker(tasker)
+    addSeeker(seeker)
     .then(res=>{
-      res.status ===200? (this.props.history.push('/')):(console.log("wrong"))
-      console.log('res=>',res);})
+      // res.status ===200? (this.props.history.push(`/Profile`)):(console.log("wrong"))
+      console.log('res=>',res)
+      window.alert("Seeker's profile uploaded !")
+    })   
+      // console.log(seeker._id)
+      //need to make error handler,an alert window for example
     .catch(error =>{
       let err=""
       err=error.response
       console.log(error.response)
       console.log(err)
       window.alert(error.response.data)
-      // window.alert(err.toString().substring(20,50))
     })
     }
   // componentDidMount() {
@@ -48,7 +50,7 @@ class TaskerEditView extends Component {
   //   const taskerId = this.props.match.params.id;
   //   console.log(taskerId)
   //   this.setState({ isFetching: true });
-  //   fetchTaskerById(taskerId)
+  //   fetchSeekerById(taskerId)
   //       .then(tasker => this.setState({ isFetching: false, tasker }))
   //       .catch(error => this.setState({ isFetching: false, error: error }));
   // }
@@ -67,14 +69,17 @@ class TaskerEditView extends Component {
   // }
   // _save = ({ id, data }) => {
   //   if (this._isNew()) {
-  //       return addTasker(data);
+  //       return addSeeker(data);
   //   }
-  //   return updateTasker(id, data);
+  //   return updateSeeker(id, data);
   // }
   render() {
-    const {tasker} = this.state;
+    const {seeker} = this.state;
     return (
         <form className="jr-form-edit" onSubmit={this.handleSubmit}>
+          <div>
+            <p>Please complete the profile before posting your tasks</p>
+          </div>
           <div className="row">
             <div className="col-md-6">
               <div className="form-group">
@@ -82,7 +87,7 @@ class TaskerEditView extends Component {
                 <input
                   className="form-control"
                   name="firstName"
-                  value={tasker.firstName || ''}
+                  value={seeker.firstName || ''}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -93,7 +98,7 @@ class TaskerEditView extends Component {
                 <input
                   className="form-control"
                   name="lastName"
-                  value={tasker.lastName || ''}
+                  value={seeker.lastName || ''}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -106,7 +111,7 @@ class TaskerEditView extends Component {
                 <input
                   className="form-control"
                   name="dob"
-                  value={tasker.dob || ''}
+                  value={seeker.dob || ''}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -117,7 +122,7 @@ class TaskerEditView extends Component {
                 <input
                   className="form-control"
                   name="email"
-                  value={tasker.email || ''}
+                  value={seeker.email || ''}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -130,7 +135,7 @@ class TaskerEditView extends Component {
                 <input
                   className="form-control"
                   name="phone"
-                  value={tasker.phone || ''}
+                  value={seeker.phone || ''}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -144,7 +149,7 @@ class TaskerEditView extends Component {
                   style={{ height: 100 }}
                   className="form-control"
                   name="description"
-                  value={tasker.description || ''}
+                  value={seeker.description || ''}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -160,4 +165,4 @@ class TaskerEditView extends Component {
   }
 }
 
-export default withRouter(TaskerEditView)
+export default withRouter(Profile);
