@@ -24,7 +24,13 @@ class TopNav extends React.Component{
             </Nav>
             <Nav>
               <Nav.Link href="/Post">Post</Nav.Link>
-              {loggedIn() ? (<Nav.Link href="/Login">Logout</Nav.Link>):
+              {loggedIn() ? 
+              (
+                <Nav>
+                  <Nav.Link href="/Profile">Profile</Nav.Link>
+                  <Nav.Link href="/Login">Logout</Nav.Link>
+                </Nav>
+              ):
               (
                 <Nav>
                   <Nav.Link href="/Login">Log in</Nav.Link>
