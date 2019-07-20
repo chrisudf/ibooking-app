@@ -55,12 +55,12 @@ export default withRouter(TopNav);
 
 const UserLogOut = withRouter(props => {
   return (
-      <a
+      <Nav.Link
           onClick={e => {
               e.preventDefault();
               logout().then(() => props.history.replace('/Login'));
           }}>
-          Log out
-      </a>
+          Logout
+      </Nav.Link>
   );
 });
