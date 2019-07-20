@@ -3,7 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import Styles from "../../styles/nav.module.scss"
 import { Link } from "react-router-dom"
 import { withRouter } from 'react-router-dom';
-import { loggedIn, logout } from "../../api/auth";
+import { loggedIn, logout,getUserId} from "../../api/auth";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAmericanSignLanguageInterpreting } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,6 +13,19 @@ export const LoaderLine = () => (
   </div>
 )
 class TopNav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id:""
+    }
+    
+  }
+  handleSeekerID =()=>{
+    getUserId()
+    .then(id => {
+      this.setState({ id:id});
+    }) 
+  }
   render() {
     return (
       <div className={Styles.topNav}>
@@ -31,7 +44,7 @@ class TopNav extends React.Component {
               {loggedIn() ?
                 (
                   <Nav>
-                    <Nav.Link href="/Postssssss" className={Styles.post}>Booking a cleaning</Nav.Link>
+                    <Nav.Link href="/Post" className={Styles.post}>Booking a cleaning</Nav.Link>
                     <Nav.Link href="/Profile">Profile</Nav.Link>
                     <UserLogOut />
                   </Nav>
