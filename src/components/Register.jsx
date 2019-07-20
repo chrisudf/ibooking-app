@@ -6,6 +6,7 @@ import Styles from "../styles/login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAmericanSignLanguageInterpreting, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { Container, Col,Row, Button } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 export default class Register extends Component {
   constructor(props) {
@@ -94,7 +95,7 @@ export default class Register extends Component {
                 </Button>
               </Col>
               <Col xs={12} className={Styles.haveAccount}>
-                Already have an account?
+                <Link to ="/Login">Already have an account?</Link>
               </Col>
             </form>
           </Container>

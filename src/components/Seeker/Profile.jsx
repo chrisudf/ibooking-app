@@ -43,36 +43,7 @@ class Profile extends Component {
       window.alert(error.response.data)
     })
     }
-  // componentDidMount() {
-  //   if (this._isNew()) {
-  //       return;
-  //   }
-  //   const taskerId = this.props.match.params.id;
-  //   console.log(taskerId)
-  //   this.setState({ isFetching: true });
-  //   fetchSeekerById(taskerId)
-  //       .then(tasker => this.setState({ isFetching: false, tasker }))
-  //       .catch(error => this.setState({ isFetching: false, error: error }));
-  // }
 
-  // _isNew = () => {
-  //   const { id } = this.props.match.params;
-  //   return id === 'NEW';
-  // }
-  // handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   this.setState((preState) => {
-  //     const tasker = { ...preState.tasker };
-  //     tasker[name] = value;
-  //     return { tasker };
-  //   });
-  // }
-  // _save = ({ id, data }) => {
-  //   if (this._isNew()) {
-  //       return addSeeker(data);
-  //   }
-  //   return updateSeeker(id, data);
-  // }
   render() {
     const {seeker} = this.state;
     return (

@@ -28,12 +28,12 @@ class TopNav extends React.Component{
               <Nav.Link href="/Task">Current Tasks</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="/Post">Post</Nav.Link>
               {loggedIn() ? 
               (
                 <Nav>
+                  <Nav.Link href="/Post">Post</Nav.Link>
                   <Nav.Link href="/Profile">Profile</Nav.Link>
-                  <Nav.Link href="/Login">Logout</Nav.Link>
+                  <UserLogOut />
                 </Nav>
               ):
               (
@@ -53,11 +53,14 @@ class TopNav extends React.Component{
 
 export default withRouter(TopNav);
 
-// const withoutLogin = withRouter(props => {
-//   return(
-//     <Nav>
-//       <Nav.Link href="/Login">Log in</Nav.Link>
-//       <Nav.Link href="/Register">Register</Nav.Link> 
-//     </Nav>
-//   )
-// })
+const UserLogOut = withRouter(props => {
+  return (
+      <a
+          onClick={e => {
+              e.preventDefault();
+              logout().then(() => props.history.replace('/Login'));
+          }}>
+          Log out
+      </a>
+  );
+});
