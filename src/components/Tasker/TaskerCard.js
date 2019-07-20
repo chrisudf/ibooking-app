@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // import Button from '../UI/Button';
-import FlexView from '../../../src/UI/FlexView';
+import FlexView from '../../components/template/FlexView';
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
 const styles = {

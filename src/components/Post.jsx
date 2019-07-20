@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Button, { LoadingButton } from '../UI/Button';
+// import Button, { LoadingButton } from '../UI/Button';
+import Button from 'react-bootstrap/Button';
 import {addTask} from "../api/task.js"
 export default class TaskEditView extends Component {
   constructor(props) {
@@ -80,10 +81,10 @@ export default class TaskEditView extends Component {
             </div>
           </div>
         </div>
-        <LoadingButton type="submit" loading={isSaving}>
+        <Button type="submit" loading={isSaving}>
           <span style={{ paddingLeft: 3 }} />
           Save
-        </LoadingButton>
+        </Button>
         <Button> Cancel </Button>
       </form>
     );

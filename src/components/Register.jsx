@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
-import { LoadingButton } from "../UI/Button";
+// import { LoadingButton } from "../UI/Button";
 import { addUser } from "../api/register";
 import Styles from "../styles/login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAmericanSignLanguageInterpreting, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { Container, Col,Row, Button } from "react-bootstrap";
-
-
 
 export default class Register extends Component {
   constructor(props) {

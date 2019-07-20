@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button, { LoadingButton } from '../../UI/Button';
+import Button from 'react-bootstrap/Button';
 import {withRouter} from "react-router-dom";
 import { fetchSeekerById, addSeeker, updateSeeker } from '../../api/seeker';
 import BlockUi from "react-block-ui";
@@ -155,10 +155,10 @@ class Profile extends Component {
               </div>
             </div>
           </div>
-          <LoadingButton type="submit" >
+          <Button type="submit" >
             <span style={{ paddingLeft: 3 }} />
             Save
-          </LoadingButton>
+          </Button>
           <Button onClick={this.handleCancel}> Cancel </Button>
         </form>
     );
