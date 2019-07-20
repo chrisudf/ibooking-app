@@ -43,39 +43,8 @@ class TaskerEditView extends Component {
         console.log(error.response);
         console.log(err);
         window.alert(error.response.data);
-        // window.alert(err.toString().substring(20,50))
       });
   };
-  // componentDidMount() {
-  //   if (this._isNew()) {
-  //       return;
-  //   }
-  //   const taskerId = this.props.match.params.id;
-  //   console.log(taskerId)
-  //   this.setState({ isFetching: true });
-  //   fetchTaskerById(taskerId)
-  //       .then(tasker => this.setState({ isFetching: false, tasker }))
-  //       .catch(error => this.setState({ isFetching: false, error: error }));
-  // }
-
-  // _isNew = () => {
-  //   const { id } = this.props.match.params;
-  //   return id === 'NEW';
-  // }
-  // handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   this.setState((preState) => {
-  //     const tasker = { ...preState.tasker };
-  //     tasker[name] = value;
-  //     return { tasker };
-  //   });
-  // }
-  // _save = ({ id, data }) => {
-  //   if (this._isNew()) {
-  //       return addTasker(data);
-  //   }
-  //   return updateTasker(id, data);
-  // }
   render() {
     const { tasker } = this.state;
     return (

@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import { Navbar } from "react-bootstrap";
-// import { LoadingButton } from "../UI/Button";
 import { addUser } from "../api/register";
 import Styles from "../styles/login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAmericanSignLanguageInterpreting, faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { Container, Col,Row, Button } from "react-bootstrap";
+import { faAmericanSignLanguageInterpreting } from "@fortawesome/free-solid-svg-icons";
+import { Container, Col, Button } from "react-bootstrap";
 import {Link} from "react-router-dom"
 
 export default class Register extends Component {
