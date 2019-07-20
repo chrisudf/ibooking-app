@@ -1,0 +1,46 @@
+@import "color";
+
+.avatar {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+}
+
+.taskCardContainer {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  .pageTitle {
+    color: $iBookColor;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+}
+.taskerId {
+  color: gray;
+  font-size: 0.5em;
+}
+.taskerCard {
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.02), 0 5px 22px -6px rgba(0, 0, 0, 0.1), 0 -12px 35px -19px rgba(0, 0, 0, 0.2);
+  .taskerName {
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .taskerEmail {
+    color: $iBookColor;
+  }
+  .taskerInfoIcon {
+    margin-right: 8px;
+    color: $iBookColor;
+  }
+}
+.taskerCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.03), 0 8px 26px -4px rgba(0, 0, 0, 0.1), 0 -18px 35px -19px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}

@@ -1,8 +1,10 @@
 // import axios from 'axios';
 import React from 'react';
-// import Button, { LoadingButton } from '../UI/Button';
+import {Container, Row} from 'react-bootstrap'
 import TaskCard from './TaskCard';
 import {fetchTasks} from '../../../src/api/task'
+import Styles from '../../styles/tasker-card.module.scss'
+
 export default class TaskView extends React.Component {
   constructor(props) {
     super(props);
@@ -24,15 +26,12 @@ export default class TaskView extends React.Component {
   }
   render() {
     return (
-      <div>
-        {/* <Link to="/taskers/edit/NEW" className="btn btn-lg btn-primary ">
-          Add new tasker
-        </Link> */}
-        <h6>Current tasks</h6>
-        <div className="row" style={{ marginTop: 15 }}>
+      <Container className={Styles.taskCardContainer}>
+        <h2 className={Styles.pageTitle}>Current tasks</h2>
+        <Row>
           {this.state.tasks.map((task, index) => <TaskCard task={task} key={task._id} />)}
-        </div>
-      </div>
+        </Row>
+      </Container>
     );
   }
 }

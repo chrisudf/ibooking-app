@@ -14,4 +14,16 @@
   .ibookBrand{
     color:$iBookColor;
   }
+  .post {
+    color:#fff !important;
+    margin-right:20px;
+    background-color: $iBookColor;
+    border-radius: 5px;
+  }
+  .post:hover {
+    background-color: $UserButtoncolor;
+    transform: scale(1.03);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.03), 0 8px 26px -4px rgba(0, 0, 0, 0.1), 0 -18px 35px -19px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+  }
 }
