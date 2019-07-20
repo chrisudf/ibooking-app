@@ -30,7 +30,6 @@ export default class TaskEditView extends Component {
           : console.log("wrong");
         console.log("res=>", res);
       })
-      //need to make error handler,an alert window for example
       .catch(error => {
         console.log(error.response);
         window.alert(error.response);
