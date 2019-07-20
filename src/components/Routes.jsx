@@ -18,7 +18,7 @@ export default () => ((
         <Route exact path="/Cleaning" component={TaskersView} />
         <Route exact path="/Task" component={TaskView} />
         <Route exact path="/Profile" component={Profile} />
-        <ProtectedRoute exact path="/Post" component={Post} />
+        <ProtectedRoute exact path="/Postssssss" component={Post} />
         <ProtectedRoute exact path="/tasker/new" component={TaskerEditView} />
     </Switch>
 ));

@@ -31,12 +31,9 @@ export default class Register extends Component {
     this.setState({ isSaving: true });
     addUser(user)
       .then(res => {
-        res.status === 200
-          ? this.props.history.push("/")
-          : console.log("wrong");
+        this.props.history.push("/")
         console.log("res=>", res);
       })
-      //need to make error handler,an alert window for example
       .catch(error => {
         console.log(error.response);
         window.alert("User already exists");
@@ -47,7 +44,7 @@ export default class Register extends Component {
     const Shadow = ({ children }) => (
       <div className={Styles.shadow}>{children}</div>
     );
-    const { isFetching, email, password } = this.state;
+    const { isFetching, username, password } = this.state;
     return (
       <div className={Styles.registerContainer}>
       <Shadow />
@@ -63,10 +60,10 @@ export default class Register extends Component {
               <Col xs={12}>
                 <input
                   type="email"
-                  name="email"
+                  name="username"
                   className={Styles.registerFormControl}
                   placeholder={"Email address:"}
-                  value={email}
+                  value={username}
                   onChange={this.handleInputChange}
                   required
                   autoFocus
