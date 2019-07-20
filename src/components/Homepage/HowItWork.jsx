@@ -7,7 +7,7 @@ import cx from "classnames"
 
 export default () => {
   return (
-    <div>
+    <div className={Styles.guide}>
       <h1 className={Styles.guidetitle}>How it <span className={Styles.boldTitle}>works</span></h1>
       <Row className={cx("justify-content-center", Styles.guideCard)}>
         <Col md={3} >
