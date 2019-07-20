@@ -31,7 +31,7 @@ class TopNav extends React.Component {
               {loggedIn() ?
                 (
                   <Nav>
-                    <Nav.Link href="/Post" className={Styles.post}>Booking a cleaning</Nav.Link>
+                    <Nav.Link href="/Postssssss" className={Styles.post}>Booking a cleaning</Nav.Link>
                     <Nav.Link href="/Profile">Profile</Nav.Link>
                     <UserLogOut />
                   </Nav>
