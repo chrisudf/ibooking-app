@@ -5,6 +5,7 @@ import { login } from "../../src/api/auth";
 import Styles from "../styles/login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAmericanSignLanguageInterpreting, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom"
 
 class Login extends Component {
   constructor(props) {
@@ -90,7 +91,7 @@ class Login extends Component {
                 </Button>
               </Col>
               <Col xs={12} className={Styles.haveAccount}>
-                  Don't have an account?
+                <Link to ="/Register">Don't have an account?</Link>
               </Col>
             </form>
           </Container>
