@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Button, { LoadingButton } from '../../UI/Button';
 import { Container, Col, Row, Button } from "react-bootstrap";
 import Styles from "../../styles/post.module.scss";
 
@@ -82,7 +81,7 @@ class TaskerEditView extends Component {
     return (
       <Container className={Styles.postContainer}>
         <Row>
-          <Col xs={12} md={8}>
+          <Col xs={12}>
             <h1 className={Styles.postTitle}>Join Us Now</h1>
             <p className={Styles.postIntro}>
               It's time to enjoy our high quality, trust-worthy cleaning service !
@@ -92,7 +91,7 @@ class TaskerEditView extends Component {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>first name</label>
+                      <label>First name</label>
                       <input
                         className="form-control"
                         name="firstName"
@@ -103,7 +102,7 @@ class TaskerEditView extends Component {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>last name</label>
+                      <label>Last name</label>
                       <input
                         className="form-control"
                         name="lastName"
@@ -116,7 +115,7 @@ class TaskerEditView extends Component {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>date of birth</label>
+                      <label>Date of birth</label>
                       <input
                         className="form-control"
                         name="dob"
@@ -127,7 +126,7 @@ class TaskerEditView extends Component {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>email</label>
+                      <label>Email</label>
                       <input
                         className="form-control"
                         name="email"
@@ -140,7 +139,7 @@ class TaskerEditView extends Component {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>phone</label>
+                      <label>Phone</label>
                       <input
                         className="form-control"
                         name="phone"
@@ -171,7 +170,6 @@ class TaskerEditView extends Component {
               </form>
             </div>
           </Col>
-          <Col lg={3} className={Styles.joinUsImage} />
         </Row>
       </Container>
     );
