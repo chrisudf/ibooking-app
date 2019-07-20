@@ -1,9 +1,10 @@
-// import axios from 'axios';
 import React from 'react';
-// import Button, { LoadingButton } from '../UI/Button';
 import TaskerCard from './TaskerCard';
 import {fetchTaskers} from '../../../src/api/tasker'
+import {Container, Row} from 'react-bootstrap'
 import {Link} from "react-router-dom"
+import Styles from '../../styles/tasker-card.module.scss'
+
 
 export default class TaskersView extends React.Component {
   constructor(props) {
@@ -27,12 +28,12 @@ export default class TaskersView extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h6>Our trust worthy cleaner</h6>
-        <div className="row" style={{ marginTop: 15 }}>
+      <Container className={Styles.taskCardContainer}>
+        <h2 className={Styles.pageTitle}>Our trust worthy cleaner</h2>
+        <Row>
           {this.state.taskers.map((tasker, index) => <TaskerCard tasker={tasker} key={tasker._id} />)}
-        </div>
-      </div>
+        </Row>
+      </Container>
     );
   }
 }

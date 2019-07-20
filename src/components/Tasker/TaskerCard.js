@@ -1,73 +1,36 @@
 import React from 'react';
+import {Row} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import { Col } from 'react-bootstrap';
+import Styles from '../../styles/tasker-card.module.scss'
+import { faEnvelopeOpenText, faPhoneVolume, faPhoneAlt, faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-// import Button from '../UI/Button';
-import FlexView from '../../components/template/FlexView';
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
-const styles = {
-  cover: {
-    width: '100%',
-    height: 175,
-    objectFit: 'cover',
-  },
-  contentWrapper: {
-    backgroundColor: 'white',
-    height: 230,
-    padding: '10px 15px',
-  },
-  meta: {
-    color: '#9a9a9a',
-    fontSize: 14,
-  },
-  separator: {
-    margin: '3px 10px',
-  },
-};
 
 function CoverPhoto({ img }) {
   return (
-    <div>
-      <img src={`${PUBLIC_URL}/${img}`} style={styles.cover} alt=""/>
-    </div>
+    <Row className="justify-content-center" >
+      {/* <img src={`${PUBLIC_URL}/${img}`} alt="" /> */}
+      <img src='/image/avatar.png' alt="" className={Styles.avatar} />
+    </Row>
   );
 }
 
 function TaskerMeta({ tasker }) {
   return (
-    <FlexView row style={styles.meta}>
-      <i className="fa fa-list-alt" style={{ paddingTop: 3 }} />
-      <p style={{ flex: 1, paddingLeft: 3 }}>{tasker._id || ''}</p>
-      {/* <i className="fa fa-calendar" style={{ paddingTop: 3 }} />{' '} */}
-      {/* <span style={{ paddingLeft: 3 }}>{'09/09'}</span> */}
-    </FlexView>
-  );
-}
-
-function Footer({ tasker }) {
-  return (
-    <FlexView row style={{ padding: 5, alignItems: 'center' }}>
-      <Link
-        className="btn-borderless"
-        style={{ paddingLeft: 8 }}
-        to={{
-          pathname: `/taskers/edit/${tasker._id}`,
-          state: { tasker },
-        }}>
-        <i className="fa fa-pencil-square-o" style={{ fontSize: 15 }} /> EDIT
-      </Link>
-    </FlexView>
+    <div className = {Styles.taskerId}>
+      <p>ID: {tasker._id || ''}</p>
+    </div>
   );
 }
 
 export default function TaskerCard({ tasker }) {
   return (
-    <div
-      className="col-sm-6 col-md-4"
-      style={{
-        marginBottom: 15,
-      }}>
-      <div className="jr-tasker-card">
+    <Col xs={12} md={4}>
+      <div className={Styles.taskerCard}>
+        <TaskerMeta tasker={tasker}/>
         <Link
           to={{
             pathname: `/taskers/${tasker._id}`,
@@ -75,19 +38,21 @@ export default function TaskerCard({ tasker }) {
           }}>
           <CoverPhoto img={tasker.cover} />
         </Link>
-
-        <div style={styles.contentWrapper}>
-          <TaskerMeta tasker={tasker} />
-          <h4 className="text-center jr-tasker-card__name"> {tasker.firstName} {tasker.lastName}</h4>
-          {/* <p>{tasker.dob}</p> */}
-          <p>e-mail: {tasker.email}</p>
-          <p>phone: {tasker.phone}</p>
-          <p className="jr-tasker-card__introduction">description: {tasker.description}</p>
-        </div>
-
-        <hr style={styles.separator} />
-        {/* <Footer tasker={tasker} /> */}
+        <h4 className={Styles.taskerName}> {tasker.firstName} {tasker.lastName}</h4>
+        <p>        
+          <FontAwesomeIcon icon={faEnvelopeOpenText} className = {Styles.taskerInfoIcon}/>
+          Email: 
+          <a href={'mailto:'+tasker.email} className={Styles.taskerEmail}> {tasker.email}</a>
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faPhoneAlt} className = {Styles.taskerInfoIcon}/> 
+          Phone: {tasker.phone}
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faIdCardAlt} className = {Styles.taskerInfoIcon}/> 
+          Description: {tasker.description}
+        </p>
       </div>
-    </div>
+    </Col>
   );
 }
