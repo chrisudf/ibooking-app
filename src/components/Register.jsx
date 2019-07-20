@@ -53,7 +53,7 @@ export default class Register extends Component {
     const { isFetching, email, password } = this.state;
     return (
       <div className={Styles.registerContainer}>
-        <Shadow>
+      <Shadow />
           <Container className={Styles.registerContent}>
             <div>
               <FontAwesomeIcon
@@ -100,7 +100,6 @@ export default class Register extends Component {
               </Col>
             </form>
           </Container>
-        </Shadow>
       </div>
     );
   }

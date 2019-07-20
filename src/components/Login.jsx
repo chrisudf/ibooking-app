@@ -40,13 +40,13 @@ class Login extends Component {
   };
 
   render() {
-    const Shadow = ({ children }) => (
-      <div className={Styles.shadow}>{children}</div>
+    const Shadow = () => (
+      <div className={Styles.shadow}></div>
     );
     const { isFetching, email, password } = this.state;
     return (
       <div className={Styles.loginContainer}>
-        <Shadow>
+      <Shadow />
           <Container className={Styles.loginContent}>
             <div>
               <FontAwesomeIcon
@@ -92,10 +92,8 @@ class Login extends Component {
               <Col xs={12} className={Styles.haveAccount}>
                   Don't have an account?
               </Col>
-              
             </form>
           </Container>
-        </Shadow>
       </div>
     );
   }
