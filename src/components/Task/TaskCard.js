@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import FlexView from '../../components/template/FlexView';
 import { Col } from 'react-bootstrap';
 import Styles from '../../styles/tasker-card.module.scss'
-import { faEnvelopeOpenText, faPhoneVolume, faPhoneAlt, faIdCardAlt, faClipboardList, faThList } from '@fortawesome/free-solid-svg-icons'
+import { faIdCardAlt,faThList } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const PUBLIC_URL = process.env.PUBLIC_URL;

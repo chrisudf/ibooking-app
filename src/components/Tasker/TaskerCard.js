@@ -3,7 +3,7 @@ import {Row} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
 import Styles from '../../styles/tasker-card.module.scss'
-import { faEnvelopeOpenText, faPhoneVolume, faPhoneAlt, faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelopeOpenText, faPhoneAlt, faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 

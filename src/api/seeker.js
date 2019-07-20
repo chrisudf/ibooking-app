@@ -1,16 +1,5 @@
 import axios from 'axios';
 
-// export function fetchTaskers() {
-//   let data=[]
-//   return axios
-//     .get('/tasker')
-//     .then(res=>{
-//       data =res.data
-//       console.log(data)
-//       return data
-//     })
-// }
-
 export function addSeeker(data) {
   return axios.post('/seeker', data);
 }
