@@ -1,0 +1,84 @@
+@import 'color';
+
+.shadow{
+  height:79vh;
+  background-color:rgba(88, 82, 82, 0.8);
+}
+.loginContainer {
+  background-image:url('/image/login.jpg');
+  background-size:100% 100%;
+  height:79vh;
+  .loginContent {
+    margin-top:-79vh;
+    color:#fff;
+    padding-top:5vh;
+    text-align: center;
+    .logo{
+      height:5em;
+      width:5em;
+    }
+    .loginForm{
+      padding-top:2vh;
+      .loginFormIcon {
+        height:8vh;
+        width:8vh;
+      }
+      .loginFormControl {
+        width:50%;
+        height:8vh;
+        margin-top:2vh;
+      }
+      .loginSubmitBtn {
+        width:50%;
+        height:8vh;
+        padding:0;
+        margin-top:2vh;
+        background-color:$iBookColor;
+        border:none
+      }
+      .haveAccount {
+        padding-top:2vh;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+.registerContainer {
+  background-image:url('/image/register.jpg');
+  background-size:100% 100%;
+  height:79vh;
+  .registerContent {
+    margin-top:-79vh;
+    color:#fff;
+    padding-top:5vh;
+    text-align: center;
+    .logo{
+      height:5em;
+      width:5em;
+    }
+    .registerForm{
+      padding-top:2vh;
+      .registerFormIcon {
+        height:8vh;
+        width:8vh;
+      }
+      .registerFormControl {
+        width:50%;
+        height:8vh;
+        margin-top:2vh;
+      }
+      .registerSubmitBtn {
+        width:50%;
+        height:8vh;
+        padding:0;
+        margin-top:2vh;
+        background-color:$iBookColor;
+        border:none
+      }
+      .haveAccount {
+        padding-top:2vh;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
