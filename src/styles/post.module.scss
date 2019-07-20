@@ -1,0 +1,54 @@
+@import 'color';
+
+.postContainer {
+  margin-top:3%;
+  .postTitle {
+    color:$iBookColor;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .postIntro {
+    color:gray;
+    text-align: center;
+  }
+  .formContainer{
+    margin-top:2%;
+    background-color: #fff;
+    padding:0;
+    margin-bottom: 3%;
+    border:1px solid $iBookColor;
+    border-radius: 5px;
+    color:gray;
+    .formTitle {
+      font-size:1.5em;
+      font-weight: bold;
+      padding:15px 0px 15px 30px;
+      color:#fff;
+      background-color:$iBookColor;
+    }
+    .formContent {
+      padding:20px;
+      .taskDescriptionContainer {
+        margin-top:3%;
+        .taskDescription {
+          font-size: 0.7em;
+        }
+      }
+      .bookBtn {
+        margin-left:5%;
+        width:40%;
+        margin-top:2%;
+        background-color:$iBookColor;
+        border:none;
+        margin-right:5%;
+      }
+    }
+  }
+  .cleanImage {
+    margin-left:8%;
+    margin-bottom: 5%;
+    margin-top:3%;
+    background-image: url('/image/clean.png');
+    background-size:100% 100%;
+  }
+}

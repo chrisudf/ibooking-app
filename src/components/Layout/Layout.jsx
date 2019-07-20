@@ -12,10 +12,11 @@ import Profile from "../../components/Seeker/Profile"
 import Routes from "../../components/Routes"
 import {Route} from "react-router-dom"
 import ProtectedRoute from "../ProtectedRoute.js"
+import '../../styles/global.scss'
 export default class Layout extends Component {
   render(){
     return (
-      <div>
+      <div className='background-color'>
         <Nav />
         <Route exact path="/" component={Home} />
         {/* <ProtectedRoute exact path="/Post" component={Post} /> */}
